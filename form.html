@@ -2,157 +2,80 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Portfolio</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PRPYVQB99"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4PRPYVQB99');
-</script>
+<title>Assignment 7</title>
+</head>
 <style>
 	@font-face {
-		font-family: "Candara";
-		src: url("Candara.ttf");
-	} @font-face { 
-		font-family: "Diplomata";
-		src: url("Diplomata-Regular.ttf");
-	} body {
-		background-color: rgb(230, 243, 252);
-		margin: 0;
-	} #page {
-		width:1024px;
-		height:1224px;
-		background: #ECECEC;
-		border: 1px solid black;
-		box-shadow: 2px 3px 6px darkgray;
-		margin: 0 auto;
-	} h1 {
-		font-family: "Diplomata";
-		font-size: 55pt;
-		line-height: 1.4em;
-		text-align: center;
-		text-shadow: 1px 2px 3px darkgray;
-		margin: 24px 0 5px 0;
-		max-width: 100%;
-	} .subtitle {
-		font-family: "Candara";
-		font-size: 22pt;
-		line-height: 1.4em;
-		text-align: center;
-		margin: 0 0 20px 0;
-		opacity: 0.7;
-		max-width: 100%;
-	} .subtitle::after {
-		content: "";
-		display: block;
-		width: 100%;
-		max-width: 1024px;
-		height: 1px;
-		background: gray;
-		margin: 10px auto 40px auto;
-		max-width: 100%;
-	} .gallery {
-		display: grid;
-		align-content: center;
-		grid-template-rows: repeat (4, 1fr);
-		gap: 20px;
-		width: 80%;
-		margin: 40px auto;
-		max-width: 100%;
-	} .gallery figure {
-		background: white;
-		padding: 10px;
-		box-shadow: 1px 2px 5px darkblue;
-		text-align: center;
-		box-shadow: 1px 2px 5px lightgray;
-		border-radius: 6px;
-		overflow: hidden;
-		max-width: 100%;
-	} .gallery img {
-		width: 100%;
-		height: 220px;
-		object-fit: cover;
-		max-width: 100%;
-	} img:hover {
-		transform: scale(1.03);
-		transition: transform 0.5s;
-	} figcaption {
-		font-family: "Candara";
-		font-size: 12pt;
-		line-height: 1.4em;
-		margin-top: 3px;
-		max-width: 100%;
-	} #contact-btn {
-		display: block;
-		width: 150px;
-		margin: 0 auto 20px;
-		text-align: center;
-		color: darkblue;
-		padding: 10px 0;
-		border-radius: 6px;
 		font-family: Candara;
-		font-size: 15pt;
-	} #contact-btn:hover {
-			background: #8F8F8F
-	} @media only screen and (max-width:750px) {
-		} .gallery {
-			float: none;
-			width: 100%;
-		} h1 {
-			font-size: 36pt;
-		} .subtitle {
-			font-size: 18pt;
-			line-height:1.8em;
-		} figcaption {
-			font-szie:14pt;
-			line-height: 1.8em;
-		} .gallery img {
-			width:100%;
-			height: auto;
-		}
+		src:url("Candara copy.ttf")
+	} h1{
+		text-align: center;
+		font-weight: normal;
+	} form {
+		width: 600px;
+		min-height: 700px;
+		padding: 24px;
+		background: #D9EAFB;
+		margin: 36px auto;
+		border: 1px solid darkblue;
+		box-shadow: 2px 3px 6px darkgray;
+		border-radius: 12px;
+		font: 14pt/1.2em diplomata;
+		src:url("diplomata.ttf")
+	} fieldset {
+		margin-top: 18px;
+	} #personal input, #submit {
+		width: 100%;
+		height: 24px;
+		margin-bottom: 12px;
+	} input[type="text"] {
+		width:98%;
+		font: 14pt/1.4em Candara;
+		margin-top: 15px;
+	} input[type="submit"] {
+		width:100px;
+		height:40px;
+		background:#69C567;
+		display: block;
+		border-radius: 6px;
+		border: 1px solid dimgray;
+		font: 14pt/1.4em Candara;
 	}
-	</style>
-</head>
+</style>
+<script language="JavaScript">
+	function toggle(source) {
+		checkboxes= document.getElementsByName('foo'); for(var checkbox in checkboxes) checkboxes[checkbox].checked=source.checked;
+	}
+	</script>
 <body>
-	<h1> PORTFOLIO </h1>
-	<p class="subtitle"> Jasmine Ruffy</p> 
-	<div class="gallery">
-		<figure>
-			<a href="FILM SETS PAGE/index.html">
-				<img src="Film.jpg" />
-			</a>
-			<figcaption>
-			Film Sets
-			</figcaption>
-		</figure>
-		<figure>
-			<a href="Photography/index.html">
-				<img src="Photography.jpg" />
-			</a>
-			<figcaption>
-			Photography
-			</figcaption>
-		</figure>
-		<figure>
-			<a href="graphics/index.html">
-				<img src="Graphic Design.jpg" />
-			</a>
-			<figcaption>
-			Graphic Design
-			</figcaption>
-		</figure>
-		<figure>
-			<a href="Art Works/index.html">
-				<img src="Art Works.jpg" />
-			</a>
-			<figcaption>
-			Art Works
-			</figcaption>
-		</figure>
-	</div>
-		<a href="Assignment 7/index.html" id="contact-btn"> Contact Me </a>
+	<form actio ="https://formsubmit.co/ruffy@unlv.nevada.edu" methods="post">
+	<h1> Contact Page </h1>
+	<input type="text" /><br/>
+	<label>First Name</label><br/>
+	<input type="text"/><br/>
+	<label>Last Name</label>
+	<input type="text"/>
+	<label>Email</label><br/>
+	<fieldset>
+	<legend> Reason for Contacting</legend>
+	<input type="checkbox" name="foo">
+	<label>Film Services</label><br/>
+	<input type="checkbox" name="foo" >
+	<label>Photography Service</label><br/>
+	<input type="checkbox" name="foo" >
+	<label>Graphic Design Service</label><br/>
+	<input type="checkbox" name="foo" >
+	<label>Painting Service</label><br/>
+	<input type="checkbox" name="foo">
+	<label>Other</label><br/>
+	</fieldset><br/>
+	<fieldsest>
+	<input type="datetime-local" id="booking-time" name="booking-time"/>
+	<label for"booking-time"> Choose your preferred date and time:</label><br/>
+	</fieldsest><br/>
+	<label> Message </label><br/>
+	<textarea rows="3" cols="72"></textarea>
+	<input type="submit"/>
+	</form>
 </body>
 </html>
