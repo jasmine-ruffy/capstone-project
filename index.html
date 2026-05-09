@@ -2,80 +2,99 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Assignment 7</title>
-</head>
+<title> Art Works </title>
 <style>
-	@font-face {
-		font-family: Candara;
-		src:url("Candara copy.ttf")
-	} h1{
-		text-align: center;
-		font-weight: normal;
-	} form {
-		width: 600px;
-		min-height: 700px;
-		padding: 24px;
-		background: #D9EAFB;
-		margin: 36px auto;
-		border: 1px solid darkblue;
-		box-shadow: 2px 3px 6px darkgray;
-		border-radius: 12px;
-		font: 14pt/1.2em diplomata;
-		src:url("diplomata.ttf")
-	} fieldset {
-		margin-top: 18px;
-	} #personal input, #submit {
-		width: 100%;
-		height: 24px;
-		margin-bottom: 12px;
-	} input[type="text"] {
-		width:98%;
-		font: 14pt/1.4em Candara;
-		margin-top: 15px;
-	} input[type="submit"] {
-		width:100px;
-		height:40px;
-		background:#69C567;
-		display: block;
-		border-radius: 6px;
+	body {
+		background: white;
+	} * {
+		margin: 0;
+		padding: 0;
+	}  #page {
+		width: 700px;
+		height: auto;
+		background: #1F1515;
 		border: 1px solid dimgray;
-		font: 14pt/1.4em Candara;
+		box-shadow: 2px 3px 6px gray;
+		margin: 0 auto;
+		padding-bottom: 16px;
+	} main {
+		width: 618px;
+		height: 646px;
+		margin: 0 auto;
+		display: grid;
+		grid-gap: 6px;
+		grid-template-columns: repeat(3, 200px);
+		grid-template-rows: 320px 320px;
+	} main figure {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	} main img {
+		width: 100%;
+		height: 100%;
+		flex: 1;
+		object-fit: cover;
+		display: block;
+	} figcaption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background: rgba (0,0,0,0.5);
+		color: antiquewhite;
+		font-size: 9pt;
+		padding: 4px 0;
+		flex-shrink: 0;
+	} main img:nth-child(1) {
+		grid-area: 1/2/2/3;
+	} main img:nth-child(2) {
+		grid-area: 1/1/2/2;
+	} main img:nth-child(3) {
+		grid-area: 2/2/3/3;
+	} main img:nth-child(4) {
+		grid-area: 2/1/3/2;
+	} main img:nth-child(5) {
+		grid-area: 2/2/3/3;
+	} main img:nth-child(6) {
+		grid-area: 1/3/3/4;
+	} main img:nth-child(7) {
+		grid-area: 2/3/3/4;
+	} h1 {
+		color: antiquewhite;
+		text-align: center;
+		padding: 20px auto;
+		font-size: 70pt;
+		font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'
+	} #print-btn {
+		display: block;
+		margin: 4px auto 0;
 	}
 </style>
-<script language="JavaScript">
-	function toggle(source) {
-		checkboxes= document.getElementsByName('foo'); for(var checkbox in checkboxes) checkboxes[checkbox].checked=source.checked;
+<script language="javascript" type="text/javascript">
+	function printPage() {
+		window.print();
 	}
-	</script>
+</script>
+</head>
+
 <body>
-	<form actio ="https://formsubmit.co/ruffy@unlv.nevada.edu" methods="post">
-	<h1> Contact Page </h1>
-	<input type="text" /><br/>
-	<label>First Name</label><br/>
-	<input type="text"/><br/>
-	<label>Last Name</label>
-	<input type="text"/>
-	<label>Email</label><br/>
-	<fieldset>
-	<legend> Reason for Contacting</legend>
-	<input type="checkbox" name="foo">
-	<label>Film Services</label><br/>
-	<input type="checkbox" name="foo" >
-	<label>Photography Service</label><br/>
-	<input type="checkbox" name="foo" >
-	<label>Graphic Design Service</label><br/>
-	<input type="checkbox" name="foo" >
-	<label>Painting Service</label><br/>
-	<input type="checkbox" name="foo">
-	<label>Other</label><br/>
-	</fieldset><br/>
-	<fieldsest>
-	<input type="datetime-local" id="booking-time" name="booking-time"/>
-	<label for"booking-time"> Choose your preferred date and time:</label><br/>
-	</fieldsest><br/>
-	<label> Message </label><br/>
-	<textarea rows="3" cols="72"></textarea>
-	<input type="submit"/>
-	</form>
+	<div id="page">
+		<header>
+			<h1> Art Works </h1>
+		</header>
+		<main>
+			<figure><img src="digital.png" /><figcaption>Digital</figcaption></figure>
+			<figure><img src="monkey.png" /><figcaption>Soft Pastels</figcaption></figure>
+			<figure><img src="mono.png" /><figcaption>Soft Pastels</figcaption></figure>
+			<figure><img src="sky.png" /><figcaption>Soft Pastels</figcaption></figure>
+			<figure><img src= "graphite.jpg" /><figcaption>Graphite</figcaption></figure>
+			<figure><img src="fox.jpg" /><figcaption>Ink</figcaption></figure>
+		</main>
+	<button id="print-btn" onClick="printPage()">Print Page</button>
+	
+	</div>
 </body>
 </html>
+
