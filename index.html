@@ -2,61 +2,179 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>graphic</title>
+<title> FILM SETS </title>
 <style>
 	body {
-		background: #1F1515;
+		background: white;
+	} * {
 		margin: 0;
-		padding: 20px;
-	} #page {
+		padding: 0;
+	}  #page {
 		width: 700px;
+		height: auto;
+		background: #1F1515;
+		border: 1px solid dimgray;
+		box-shadow: 2px 3px 6px gray;
 		margin: 0 auto;
+		padding-bottom: 16px;
+	} main {
+		width: 618px;
+		height: 646px;
+		margin: 0 auto;
+		display: grid;
+		grid-gap: 6px;
+		grid-template-columns: repeat(3, 200px);
+		grid-template-rows: 320px 320px;
+	} main img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	} main img:nth-child(1) {
+		grid-area: 1/2/2/3;
+	} main img:nth-child(2) {
+		grid-area: 1/1/2/2;
+	} main img:nth-child(3) {
+		grid-area: 2/2/3/3;
+	} main img:nth-child(4) {
+		grid-area: 2/1/3/2;
+	} main img:nth-child(5) {
+		grid-area: 2/2/3/3;
+	} main img:nth-child(6) {
+		grid-area: 1/3/3/4;
+	} main img:nth-child(7) {
+		grid-area: 2/3/3/4;
 	} h1 {
 		color: antiquewhite;
 		text-align: center;
-		padding: 20px 0;
+		padding: 20px auto;
 		font-size: 70pt;
-		font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
-	} img {
-		width: 100%;
-		display: block;
-		box-shadow: 2px 3px 6px black;
-	} summary {
-		cursor: pointer;
-		color: antiquewhite;
-		font-size: 14pt;
-		padding: 8px 12px;
-		background: #2F3629;
-		list-style: none;
-	} summary:hover {
-		background: #3d4a33;
-	} details {
-		margin: 20px auto;
-		width: 700px;
+		font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'
+	} table {
+		margin: 0 auto 24px;
+		width: 640px;
+		font: 9pt/1.2em Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+		border-collapse: collapse;
 		border: 1px solid dimgray;
-	} details[open] summary {
-		border-bottom: 1px solid dimgray;
-	} details p {
+	} td, th {
+		padding: 3px 12px;
 		color: antiquewhite;
-		padding: 8px 12px;
-		font-size: 11pt;
+		border: 1px solid dimgray;
+    } tr:nth-child(odd) {
+        background: rgba(255,255,255,0.40);
+    } tr:nt-child(2) {
+        background: #8A8A8A;
+        position: sticky;
+        top: 0;
+	} #print-btn {
+		display: block;
+		margin: 4px auto 0;
 	}
 </style>
+<script language="javascript" type="text/javascript">
+	function printPage() {
+		window.print();
+	}
+</script>
 </head>
+
 <body>
 	<div id="page">
-		<h1> Graphic Design </h1>
-		<img src="cat.png"/>
-		<details>
-			<summary> Assignment 1 </summary>
-			<p> To create a simple web page with hypertext markup language (HTML) tags and cascading style sheet (CSS) styles that includes text and an image. </p>
-		</details>
-		<img src="monkeys.png"/>
-		<details>
-			<summary> Assignment 8 </summary>
-			<p> To create a type sample page to show fonts with one or more images </p>
-		</details>
+		<header>
+			<h1> Film Sets </h1>
+		</header>
+		<table>
+			<tr>
+				<th colspan="3">MY WORKS</th>
+			</tr>
+			<tr>
+				<th> Film Set (Year)</th>
+				<th> Director </th>
+				<th> Role </th>
+			</tr>
+			<tr>
+				<td> Cora and Thea (2024)</td>
+				<td> Kristian Martinez</td>
+				<td> Actress</td>
+			</tr>
+			<tr>
+				<td> 16mm Project (2024)</td>
+				<td> Drew Pappas</td>
+				<td> Storyboard Artist, Screenwriter, DP</td>
+			</tr>
+			<tr>
+				<td> The Mannequin (2024)</td>
+				<td> Sophia De Lima</td>
+				<td> Storyboard Artist, DP, Editor</td>
+			</tr>
+			<tr>
+				<td> A Very Lovely Girl (2024)</td>
+				<td> Rod Blackhurst</td>
+				<td> Camera Utility</td>
+			</tr>
+			<tr>
+				<td> Ollie and Alphie (2024)</td>
+				<td> Kristian Martinez</td>
+				<td> Key Grip</td>
+			</tr>
+			<tr>
+				<td> The Meadow Part 2 (2024) </td>
+				<td> Tyler Kulin</td>
+				<td> Producer, 1st Assistant </td>
+			</tr>
+			<tr>
+				<td> Arthur (2025)</td>
+				<td> Tyler Kulin (2025) </td>
+				<td> Production Designer, Graphic Designer</td>
+			</tr>
+			<tr>
+				<td> Edge of Daylight (2025)</td>
+				<td> Andrea Walter</td>
+				<td> Set Dresser</td>
+			</tr>
+			<tr>
+				<td> Mother's Rice (2025)</td>
+				<td> Justine Baclaso </td>
+				<td> Set Decorator</td>
+			</tr>
+			<tr>
+				<td> What's There To Celebrate (2025)</td>
+				<td> Sophia De Lima</td>
+				<td> Set Decorator, Graphic Designer</td>
+			</tr>
+			<tr>
+				<td> Snake Eyes</td>
+				<td> Drew Pappas, Mana Naki</td>
+				<td> Art Director, Graphic Designer, Practical Effects</td>
+			</tr>
+			<tr>
+				<td> HOPE (2025)</td>
+				<td> Bryton Valentine</td>
+				<td> Best Boy Grip</td>
+			</tr>
+				<tr>
+				<td> Cattivo (2025-2026)</td>
+				<td> Anthony Mallano</td>
+				<td> Production Designer</td>
+			</tr>
+			<tr>
+				<td> Animosity</td>
+				<td> Jeremy Perry</td>
+				<td> Production Designer, Props Master</td>
+			</tr>
+		</table>
+		<main>
+			<img src="celebrate.jpg" />
+			<img src="animosity.jpg" />
+			<img src="paint.jpg" />
+			<img src="paint2.jpg" />
+			<img src="room.jpg" />
+			<img src="alley.jpg" />
+			<img src="paint.jpg" />
+		</main>
+	<button id="print-btn" onClick="printPage()">Print Page</button>
 	
 	</div>
 </body>
 </html>
+
